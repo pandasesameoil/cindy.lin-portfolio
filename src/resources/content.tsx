@@ -269,9 +269,9 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  label: "Featured Work",
+  title: "Featured Work",
+  description: `Featured projects by ${person.name}`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -290,48 +290,46 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
+      src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80",
+      alt: "Team collaboration",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
+      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
+      alt: "Workshop session",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80",
+      alt: "Business meeting",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
+      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+      alt: "Data analytics",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
+      src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+      alt: "E-commerce operations",
+      orientation: "horizontal",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
+      alt: "Community event",
+      orientation: "horizontal",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+      alt: "Conference presentation",
+      orientation: "horizontal",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
+      alt: "Startup team",
+      orientation: "horizontal",
     },
   ],
 };

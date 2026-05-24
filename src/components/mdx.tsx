@@ -33,9 +33,15 @@ type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 function CustomLink({ href, children, ...props }: CustomLinkProps) {
+  const linkStyle = {
+    color: "#38BDF8",
+    textDecoration: "underline",
+    textUnderlineOffset: "2px",
+  };
+
   if (href.startsWith("/")) {
     return (
-      <SmartLink href={href} {...props}>
+      <SmartLink href={href} style={linkStyle} {...props}>
         {children}
       </SmartLink>
     );
@@ -43,14 +49,14 @@ function CustomLink({ href, children, ...props }: CustomLinkProps) {
 
   if (href.startsWith("#")) {
     return (
-      <a href={href} {...props}>
+      <a href={href} style={linkStyle} {...props}>
         {children}
       </a>
     );
   }
 
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+    <a href={href} target="_blank" rel="noopener noreferrer" style={linkStyle} {...props}>
       {children}
     </a>
   );

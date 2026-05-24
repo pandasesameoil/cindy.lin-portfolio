@@ -93,7 +93,7 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "BLIVE Global (Ding-go.com)",
+        company: (<>BLIVE Global (dba <a href="https://ding-go.com" target="_blank" rel="noopener noreferrer">Ding-go</a>)</>),
         timeframe: "Jul 2025 – Present",
         role: "Growth Strategist (Founding Team)",
         achievements: [

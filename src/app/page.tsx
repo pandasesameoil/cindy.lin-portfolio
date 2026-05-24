@@ -202,7 +202,7 @@ export default function Home() {
       </Row>
 
       {/* Impact at a Glance */}
-      <Column fillWidth gap="24" style={{ marginBottom: "64px" }}>
+      <Column fillWidth gap="24">
         <Row fillWidth horizontal="space-between" vertical="center">
           <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
             IMPACT AT A GLANCE

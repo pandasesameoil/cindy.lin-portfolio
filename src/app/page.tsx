@@ -13,7 +13,7 @@ import {
   SmartLink,
   Flex,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, social } from "@/resources";
+import { home, about, person, baseURL, social, gallery } from "@/resources";
 import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
 
 export async function generateMetadata() {
@@ -290,92 +290,44 @@ export default function Home() {
         </Row>
         <Column gap="12">
           <Row gap="12" fillWidth>
-            <Flex
-              radius="m"
-              style={{
-                flex: 1,
-                height: "200px",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80"
-                alt="Gallery photo 1"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Flex>
-            <Flex
-              radius="m"
-              style={{
-                flex: 1,
-                height: "200px",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80"
-                alt="Gallery photo 2"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Flex>
-            <Flex
-              radius="m"
-              style={{
-                flex: 1,
-                height: "200px",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80"
-                alt="Gallery photo 3"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Flex>
+            {gallery.images.slice(0, 3).map((image, index) => (
+              <SmartLink key={index} href="/gallery" style={{ flex: 1 }}>
+                <Flex
+                  radius="m"
+                  style={{
+                    height: "200px",
+                    overflow: "hidden",
+                    cursor: "pointer",
+                  }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </Flex>
+              </SmartLink>
+            ))}
           </Row>
           <Row gap="12" fillWidth>
-            <Flex
-              radius="m"
-              style={{
-                flex: 1,
-                height: "200px",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
-                alt="Gallery photo 4"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Flex>
-            <Flex
-              radius="m"
-              style={{
-                flex: 1,
-                height: "200px",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80"
-                alt="Gallery photo 5"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Flex>
-            <Flex
-              radius="m"
-              style={{
-                flex: 1,
-                height: "200px",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
-                alt="Gallery photo 6"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Flex>
+            {gallery.images.slice(3, 6).map((image, index) => (
+              <SmartLink key={index} href="/gallery" style={{ flex: 1 }}>
+                <Flex
+                  radius="m"
+                  style={{
+                    height: "200px",
+                    overflow: "hidden",
+                    cursor: "pointer",
+                  }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </Flex>
+              </SmartLink>
+            ))}
           </Row>
         </Column>
       </Column>

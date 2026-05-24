@@ -1,6 +1,6 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, Text, Row, SmartLink, Icon } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
-import { Projects } from "@/components/work/Projects";
+import { FeaturedWorkGrid } from "@/components/FeaturedWorkGrid";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -14,7 +14,7 @@ export async function generateMetadata() {
 
 export default function Work() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="l" paddingY="48" paddingX="l" gap="32">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -28,10 +28,17 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-        {work.title}
-      </Heading>
-      <Projects />
+      <Row fillWidth horizontal="space-between" vertical="center">
+        <Column gap="8">
+          <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
+            FEATURED WORK
+          </Text>
+          <Heading variant="heading-strong-xl">
+            {work.title}
+          </Heading>
+        </Column>
+      </Row>
+      <FeaturedWorkGrid />
     </Column>
   );
 }

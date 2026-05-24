@@ -273,6 +273,113 @@ export default function Home() {
         </RevealFx>
       </Column>
 
+      {/* Gallery Preview - Moments from the Journey */}
+      <Column fillWidth gap="24">
+        <Row fillWidth horizontal="space-between" vertical="center">
+          <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
+            MOMENTS FROM THE JOURNEY
+          </Text>
+          <SmartLink href="/gallery">
+            <Row gap="4" vertical="center">
+              <Text variant="label-default-s" style={{ color: "#38BDF8" }}>
+                VIEW FULL GALLERY
+              </Text>
+              <Icon name="arrowRight" size="s" style={{ color: "#38BDF8" }} />
+            </Row>
+          </SmartLink>
+        </Row>
+        <Column gap="12">
+          <Row gap="12" fillWidth>
+            <Flex
+              radius="m"
+              style={{
+                flex: 1,
+                height: "200px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80"
+                alt="Gallery photo 1"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Flex>
+            <Flex
+              radius="m"
+              style={{
+                flex: 1,
+                height: "200px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80"
+                alt="Gallery photo 2"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Flex>
+            <Flex
+              radius="m"
+              style={{
+                flex: 1,
+                height: "200px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80"
+                alt="Gallery photo 3"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Flex>
+          </Row>
+          <Row gap="12" fillWidth>
+            <Flex
+              radius="m"
+              style={{
+                flex: 1,
+                height: "200px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+                alt="Gallery photo 4"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Flex>
+            <Flex
+              radius="m"
+              style={{
+                flex: 1,
+                height: "200px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80"
+                alt="Gallery photo 5"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Flex>
+            <Flex
+              radius="m"
+              style={{
+                flex: 1,
+                height: "200px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
+                alt="Gallery photo 6"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Flex>
+          </Row>
+        </Column>
+      </Column>
+
       {/* Skills & Tools */}
       <Column fillWidth gap="24">
         <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>

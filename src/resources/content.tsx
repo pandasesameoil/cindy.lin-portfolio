@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Cindy",
+  lastName: "Lin",
+  name: `Hsin-Yi (Cindy) Lin`,
+  role: "GTM & Ecosystem Operator | Partnerships, Community-Led Growth, and Cross-Border Commerce",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "panda.sesameoil@gmail.com",
+  location: "America/Los_Angeles", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Chinese (Native)", "Japanese (Elementary)", "French (Elementary)"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -23,15 +23,9 @@ const social: Social = [
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/cindyhylin",
     essential: true,
   },
   {
@@ -41,15 +35,9 @@ const social: Social = [
     essential: false,
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
-  },
-  {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: "https://mail.google.com/mail/?view=cm&to=panda.sesameoil@gmail.com&su=Let's%20Connect&body=Hi%20Cindy,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0A%0ABest%20regards,",
     essential: true,
   },
 ];
@@ -60,23 +48,23 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Scaling businesses through partnerships and growth</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I&apos;m Cindy, a GTM & Ecosystem Operator based in <Text as="span" size="xl" weight="strong">Irvine, CA</Text>, helping businesses <br /> scale through partnerships, community-led growth, and cross-border commerce.
 </>
   ),
 };
@@ -102,9 +90,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Based in Irvine, CA, I work across venture capital, ecommerce, and startup ecosystems to help businesses scale through partnerships, community-led growth, and operational expansion. My experience spans investor ecosystems, ecommerce operations, community initiatives, and cross-border commerce between Asia and the US.
       </>
     ),
   },
@@ -113,41 +99,122 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Sunstone Management VC",
+        timeframe: "Jan 2024 – Present",
+        role: "Investor Relationship & Marketing Analyst",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Facilitated investor-startup partnerships across 3 completed investment deals totaling $150M by coordinating investor alignment, opportunity evaluation, and relationship management
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Supported a $900k investment in an artificial heart startup by connecting a Chinese medical device industrialist with US-based R&D teams to enable cross-border commercialization opportunities
+          </>,
+          <>
+            Managed investor relationship operations across 16 active funds and 100+ portfolio companies by building Airtable-based tracking systems for investor communications, lifecycle management, and reporting processes
+          </>,
+          <>
+            Built and scaled founder-investor ecosystem initiatives through 100+ community and industry events, including NVIDIA GTC and CES side events with 300–700+ attendees
+          </>,
+          <>
+            Expanded Irvine Dream Run participation from 300 to 1,200 attendees across 3 annual events through sponsorship acquisition, partnership development, and community outreach initiatives
+          </>,
+          <>
+            Managed 38+ strategic partnerships for Irvine Tech Day across startup ecosystems, chambers of commerce, universities, and local government organizations
+          </>,
+          <>
+            Coordinated 25 private investor networking events and executive community experiences designed to deepen long-term investor relationships
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "BLIVE Global (Ding-go.com)",
+        timeframe: "Jul 2025 – Present",
+        role: "Growth Strategist (Founding Team)",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Repositioned the platform around high-demand Taiwanese imports through competitor analysis and market positioning strategies
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Scaled monthly revenue from $2K to $30K within 7 months by optimizing product selection, user experience, and growth initiatives
+          </>,
+          <>
+            Rebuilt logistics operations by relocating fulfillment infrastructure to the West Coast, reducing average shipping lead times from 20 to 7 days
+          </>,
+          <>
+            Developed an influencer partnership framework to segment creators by brand awareness and retention goals
+          </>,
+          <>
+            Partnered with 9 influencers under an affiliate-based model that generated 30% order growth and 200K+ combined organic views across Instagram campaigns
+          </>,
+          <>
+            Expanded platform partnerships by onboarding 5 US-based brands and coordinating supplier relationships across Taiwan, Japan, and the US
+          </>,
+          <>
+            Launched a Beauty & Wellness category through cross-border vendor partnerships, contributing to a 15% increase in platform revenue
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "EcoMart",
+        timeframe: "Jan 2024 – Present",
+        role: "E-commerce Operations Consultant (Amazon Specialist)",
+        achievements: [
+          <>
+            Managed ecommerce growth initiatives across 4 Amazon seller accounts by optimizing marketplace positioning, product listings, and customer conversion strategies
+          </>,
+          <>
+            Developed pre-launch product evaluation and competitor analysis SOPs to improve SKU selection, pricing alignment, and marketplace readiness decisions
+          </>,
+          <>
+            Helped scale a flagship Amazon product to a Top 5 category ranking through listing optimization and marketplace positioning strategies
+          </>,
+          <>
+            Managed a $3,000 monthly PPC budget by analyzing customer reviews, conversion behavior, and advertising performance
+          </>,
+          <>
+            Supported wholesale expansion by launching a vendor account pilot for 7 SKUs and securing initial purchase orders
+          </>,
+          <>
+            Contributed to direct ecommerce growth through SHOPLINE storefront operations, including fulfillment of an order from NASA
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Hermès",
+        timeframe: "May 2022 – Jun 2022",
+        role: "Assistant Intern",
+        achievements: [
+          <>
+            Selected as the only intern among 50+ candidates and extended through peak season
+          </>,
+          <>
+            Supported inventory coordination across 1,000+ luxury products and 7 merchandise categories
+          </>,
+          <>
+            Managed daily replenishment operations for 300+ products in a high-volume luxury retail environment
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "ChewRank",
+        timeframe: "Mar 2023 – Dec 2023",
+        role: "Founder",
+        achievements: [
+          <>
+            Recruited and led a 4-member team to develop a restaurant discovery platform integrating search, reservation, and social engagement features
+          </>,
+          <>
+            Conducted 200+ consumer surveys to identify frustrations with existing dining platforms
+          </>,
+          <>
+            Built and tested an MVP prototype that earned recognition in 2 university entrepreneurship competitions and secured $8K+ in funding
+          </>,
+          <>
+            Live at: chewrank.netlify.app
           </>,
         ],
         images: [],
@@ -156,77 +223,45 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of California, Irvine",
+        description: <>Master of Innovation and Entrepreneurship (2021–2023)</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Soochow University, Taipei, Taiwan",
+        description: <>Bachelor of Business Administration (2016–2020)</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills & Tools",
     skills: [
       {
-        title: "Figma",
+        title: "Tools",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Airtable, Amazon Seller Central, SHOPLINE, Google Analytics, Figma, Claude, Vercel, Lovable</>
         ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        tags: [],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Core Skills",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Partnerships, Ecosystem Growth, GTM Strategy, Community-Led Growth, Ecommerce Operations, Cross-Border Commerce</>
         ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Certifications",
+        description: (
+          <>Google Analytics Individual Qualification, Google Ads Measurement Certification, UI/UX Design with Figma</>
+        ),
+        tags: [],
+        images: [],
       },
     ],
   },

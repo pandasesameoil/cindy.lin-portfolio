@@ -31,7 +31,7 @@ const social: Social = [
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: `mailto:panda.sesameoil@gmail.com?subject=${encodeURIComponent("Let's Connect – [Your Name]")}&body=${encodeURIComponent("Hi Cindy,\n\nI came across your portfolio and would love to connect.\n\nBest regards,\n[Your Name]")}`,
     essential: true,
   },
 ];

@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Selene",
   lastName: "Yu",
   name: `Selene Yu`,
-  role: "Design Engineer",
+  role: "GTM & Growth Operator | Ecommerce, Ecosystem Growth, and Cross-Border Commerce",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -102,9 +102,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Based in Irvine, CA, I work across venture capital, ecommerce, and startup ecosystems to help businesses scale through growth execution, strategic partnerships, and operational expansion. My experience spans investor ecosystems, ecommerce growth, community-led initiatives, and cross-border commerce between Asia and the US.
       </>
     ),
   },

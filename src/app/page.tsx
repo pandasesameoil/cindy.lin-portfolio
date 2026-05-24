@@ -263,7 +263,7 @@ export default function Home() {
       </Column>
 
       {/* Featured Work */}
-      <Column fillWidth gap="24">
+      <Column fillWidth gap="12">
         <Row fillWidth horizontal="space-between" vertical="center">
           <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
             FEATURED WORK
@@ -283,7 +283,7 @@ export default function Home() {
       </Column>
 
       {/* Gallery Preview - Moments from the Journey */}
-      <Column fillWidth gap="24">
+      <Column fillWidth gap="12">
         <Row fillWidth horizontal="space-between" vertical="center">
           <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
             MOMENTS FROM THE JOURNEY

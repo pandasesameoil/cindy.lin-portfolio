@@ -58,7 +58,7 @@ export function FeaturedWorkCarousel() {
   };
 
   return (
-    <Column fillWidth gap="16">
+    <Column fillWidth gap="12">
       {/* Navigation arrows */}
       <Row fillWidth horizontal="end" gap="8">
         <Flex
@@ -98,7 +98,7 @@ export function FeaturedWorkCarousel() {
       {/* Carousel container */}
       <Row
         id="carousel-container"
-        gap="24"
+        gap="12"
         fillWidth
         style={{
           overflowX: "auto",

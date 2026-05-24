@@ -14,7 +14,7 @@ import {
   Flex,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, social } from "@/resources";
-import { Projects } from "@/components/work/Projects";
+import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -269,7 +269,7 @@ export default function Home() {
           </SmartLink>
         </Row>
         <RevealFx translateY="16">
-          <Projects range={[1, 3]} />
+          <FeaturedWorkCarousel />
         </RevealFx>
       </Column>
 

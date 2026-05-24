@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Column, Row, Text, Icon, Flex, SmartLink } from "@once-ui-system/core";
 
 interface FeaturedProject {
@@ -39,75 +38,19 @@ const featuredProjects: FeaturedProject[] = [
 ];
 
 export function FeaturedWorkCarousel() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const handleScrollLeft = () => {
-    const container = document.getElementById("carousel-container");
-    if (container) {
-      container.scrollBy({ left: -400, behavior: "smooth" });
-      setScrollPosition(container.scrollLeft - 400);
-    }
-  };
-
-  const handleScrollRight = () => {
-    const container = document.getElementById("carousel-container");
-    if (container) {
-      container.scrollBy({ left: 400, behavior: "smooth" });
-      setScrollPosition(container.scrollLeft + 400);
-    }
-  };
-
   return (
-    <Column fillWidth gap="24">
-      {/* Navigation arrows */}
-      <Row fillWidth horizontal="end" gap="8">
-        <Flex
-          as="button"
-          onClick={handleScrollLeft}
-          horizontal="center"
-          vertical="center"
-          radius="full"
-          border="neutral-alpha-weak"
-          style={{
-            width: "40px",
-            height: "40px",
-            cursor: "pointer",
-            background: "var(--page-background)",
-          }}
-        >
-          <Icon name="arrowLeft" size="s" />
-        </Flex>
-        <Flex
-          as="button"
-          onClick={handleScrollRight}
-          horizontal="center"
-          vertical="center"
-          radius="full"
-          border="neutral-alpha-weak"
-          style={{
-            width: "40px",
-            height: "40px",
-            cursor: "pointer",
-            background: "var(--page-background)",
-          }}
-        >
-          <Icon name="arrowRight" size="s" />
-        </Flex>
-      </Row>
-
-      {/* Carousel container */}
-      <Row
-        id="carousel-container"
-        gap="24"
-        fillWidth
-        style={{
-          overflowX: "auto",
-          scrollBehavior: "smooth",
-          scrollSnapType: "x mandatory",
-          WebkitOverflowScrolling: "touch",
-          paddingBottom: "8px",
-        }}
-      >
+    <Row
+      id="carousel-container"
+      gap="24"
+      fillWidth
+      style={{
+        overflowX: "auto",
+        scrollBehavior: "smooth",
+        scrollSnapType: "x mandatory",
+        WebkitOverflowScrolling: "touch",
+        paddingBottom: "8px",
+      }}
+    >
         {featuredProjects.map((project, index) => (
           <SmartLink
             key={index}
@@ -181,10 +124,9 @@ export function FeaturedWorkCarousel() {
                   <Icon name="arrowRight" size="xs" style={{ color: "#38BDF8" }} />
                 </Row>
               </Column>
-            </Row>
-          </SmartLink>
-        ))}
-      </Row>
-    </Column>
+        </Row>
+      </SmartLink>
+    ))}
+  </Row>
   );
 }

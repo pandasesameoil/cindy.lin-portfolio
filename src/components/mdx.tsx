@@ -34,7 +34,7 @@ type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 function CustomLink({ href, children, ...props }: CustomLinkProps) {
   const linkStyle = {
-    color: "var(--brand-solid-strong)",
+    color: "#38BDF8",
     textDecoration: "underline",
     textUnderlineOffset: "2px",
   };

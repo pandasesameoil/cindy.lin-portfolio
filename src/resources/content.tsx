@@ -118,16 +118,22 @@ const about: About = {
         role: "Investor Relations & Marketing Analyst",
         achievements: [
           <>
-            Facilitated $150M in transaction value across 3 closed investment deals
+            Facilitated investor-startup matching across 3 completed investment deals totaling $150M by coordinating stakeholder communication, opportunity evaluation, and execution workflows
           </>,
           <>
-            Managed operational lifecycle for 16 active funds ($30M AUM) and reporting for 100+ portfolio companies to 160+ investors
+            Supported go-to-market planning for a medical device startup by aligning commercialization opportunities between US R&D teams and Asian manufacturing partners
           </>,
           <>
-            Organized 40+ Weekly Demo Days for 70+ startups, attracting 2,000+ attendees
+            Managed reporting operations across 16 active funds and 100+ portfolio companies, ensuring accurate investor communications and committee-ready compliance documentation
           </>,
           <>
-            Grew LinkedIn presence to 80K+ impressions with 20% MoM growth; led 6 cross-functional teams for events with 500+ participants
+            Built and scaled founder-investor community initiatives through 100+ events ranging from startup demo days to executive networking experiences, including CES and NVIDIA GTC side events with 300–700+ attendees
+          </>,
+          <>
+            Supported the growth of Irvine Dream Run from 300 to 1,200 participants across 3 large-scale community events through cross-functional coordination, partnership outreach, and operational execution
+          </>,
+          <>
+            Coordinated high-touch relationship events including 25 private investor yacht gatherings and investor appreciation experiences designed to strengthen long-term community engagement
           </>,
         ],
         images: [],

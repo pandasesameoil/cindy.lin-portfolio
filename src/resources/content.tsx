@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Cindy",
+  lastName: "Lin",
+  name: `Hsin-Yi (Cindy) Lin`,
+  role: "GTM Operator · Ecommerce & Cross-Border Commerce",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "jingcindy0314@gmail.com",
+  location: "America/Los_Angeles", // Irvine, CA
+  languages: ["English", "Chinese (Native)", "Japanese (Elementary)"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
+  description: <>Updates on GTM strategy and ecommerce insights</>,
 };
 
 const social: Social = [
@@ -23,27 +23,9 @@ const social: Social = [
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://linkedin.com/in/cindyhylin",
     essential: true,
   },
   {
@@ -60,23 +42,23 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>GTM Operator · Ecommerce & Cross-Border Commerce</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">ChewRank</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured project
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "https://chewrank.netlify.app",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I&apos;m Cindy, a GTM operator based in Irvine, CA helping brands scale — from building investor pipelines to launching products on Amazon, from growing Taiwanese imports 15x to running influencer campaigns.
 </>
   ),
 };
@@ -102,9 +84,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I&apos;m a GTM operator based in Irvine, CA with experience spanning venture capital, ecommerce growth, and cross-border commerce between Asia and the US. I help brands scale — from building investor pipelines to launching products on Amazon, from growing Taiwanese imports 15x to running influencer campaigns that drive organic reach.
       </>
     ),
   },
@@ -113,41 +93,69 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "BLIVE Global (Ding-go.com)",
+        timeframe: "Jul 2025 – Present",
+        role: "Growth Strategist (Founding Team)",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Scaled monthly revenue from $2K to $30K (15x growth) in 7 months through UI redesign and product-market fit strategy
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Rebuilt logistics infrastructure, reducing shipping lead times by 50% (20 days to 7 days) while sustaining 30–50% gross margin
+          </>,
+          <>
+            Launched Beauty & Wellness vertical through Taiwanese/Japanese vendor partnerships, growing platform revenue 15% in 60 days
+          </>,
+          <>
+            Organized influencer campaigns with 4+ creators, generating 200K+ organic views and 50% MoM revenue spike
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Sunstone Management VC",
+        timeframe: "Jan 2024 – Present",
+        role: "Investor Relations & Marketing Analyst",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Facilitated $150M in transaction value across 3 closed investment deals
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Managed operational lifecycle for 16 active funds ($30M AUM) and reporting for 100+ portfolio companies to 160+ investors
+          </>,
+          <>
+            Organized 40+ Weekly Demo Days for 70+ startups, attracting 2,000+ attendees
+          </>,
+          <>
+            Grew LinkedIn presence to 80K+ impressions with 20% MoM growth; led 6 cross-functional teams for events with 500+ participants
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "EcoMart",
+        timeframe: "Jan 2024 – Present",
+        role: "E-commerce Operations Consultant (Amazon Specialist)",
+        achievements: [
+          <>
+            Managed 4 high-volume Amazon Seller accounts; achieved Top 5 Category Rankings for flagship products
+          </>,
+          <>
+            Managed $3K/month PPC budget with consistent 2x ROAS
+          </>,
+          <>
+            Launched Amazon Vendor Account pilot for 7 SKUs, secured 3 initial POs with 50% volume increase
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Chipotle",
+        timeframe: "Feb 2023 – Jun 2023",
+        role: "Student Consultant",
+        achievements: [
+          <>
+            Led team of 10 to deliver operational efficiency recommendations; successfully implemented, achieving 30% efficiency increase
           </>,
         ],
         images: [],
@@ -156,77 +164,53 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "UC Irvine",
+        description: <>Master of Entrepreneurship (2021–2023)</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Soochow University, Taipei, Taiwan",
+        description: <>BBA (2016–2020)</>,
+      },
+      {
+        name: "ChewRank (Founder)",
+        description: (
+          <>
+            Restaurant discovery app; won 2nd place at 2023 Stella Zheng New Venture Competition and 3rd place at Beall & Butterworth Competition, earning $8K+ in funding. Live at chewrank.netlify.app
+          </>
+        ),
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills & Certifications",
     skills: [
       {
-        title: "Figma",
+        title: "Ecommerce",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Amazon Seller Central, Vendor Central, PPC management, cross-border commerce</>
         ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        tags: [],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Analytics & Marketing",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Google Analytics (Certified), Google Ads (Measurement Certified), influencer campaigns, GTM strategy</>
         ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Tools",
+        description: (
+          <>Figma (UI/UX certified), Excel (advanced), Salesforce (basic)</>
+        ),
+        tags: [],
+        images: [],
       },
     ],
   },

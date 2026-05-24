@@ -119,7 +119,7 @@ export function FeaturedWorkCarousel() {
               radius="l"
               style={{
                 width: "min(600px, 85vw)",
-                minHeight: "220px",
+                height: "280px",
                 overflow: "hidden",
                 scrollSnapAlign: "start",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
@@ -129,9 +129,10 @@ export function FeaturedWorkCarousel() {
               {/* Image */}
               <Flex
                 style={{
-                  width: "40%",
-                  minHeight: "220px",
+                  width: "35%",
+                  height: "280px",
                   overflow: "hidden",
+                  flexShrink: 0,
                 }}
               >
                 <img
@@ -147,10 +148,11 @@ export function FeaturedWorkCarousel() {
 
               {/* Content */}
               <Column
-                padding="24"
                 gap="12"
-                style={{ width: "60%" }}
-                vertical="center"
+                style={{
+                  width: "65%",
+                  padding: "24px",
+                }}
               >
                 <Text variant="heading-strong-m">{project.title}</Text>
                 <Text

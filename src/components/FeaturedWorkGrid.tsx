@@ -51,7 +51,7 @@ export function FeaturedWorkGrid() {
             radius="l"
             fillWidth
             style={{
-              minHeight: "240px",
+              height: "280px",
               overflow: "hidden",
               boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
               background: "var(--page-background)",
@@ -60,9 +60,10 @@ export function FeaturedWorkGrid() {
             {/* Image */}
             <Flex
               style={{
-                width: "40%",
-                minHeight: "240px",
+                width: "35%",
+                height: "280px",
                 overflow: "hidden",
+                flexShrink: 0,
               }}
             >
               <img
@@ -78,10 +79,11 @@ export function FeaturedWorkGrid() {
 
             {/* Content */}
             <Column
-              padding="32"
-              gap="16"
-              style={{ width: "60%" }}
-              vertical="center"
+              gap="12"
+              style={{
+                width: "65%",
+                padding: "24px",
+              }}
             >
               <Text variant="heading-strong-l">{project.title}</Text>
               <Text

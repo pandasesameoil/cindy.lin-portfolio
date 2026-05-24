@@ -202,7 +202,7 @@ export default function Home() {
       </Row>
 
       {/* Impact at a Glance */}
-      <Column fillWidth gap="24">
+      <Column fillWidth gap="24" style={{ marginBottom: "64px" }}>
         <Row fillWidth horizontal="space-between" vertical="center">
           <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
             IMPACT AT A GLANCE
@@ -224,12 +224,16 @@ export default function Home() {
           {impactMetrics.map((metric, index) => (
             <Column
               key={index}
-              padding="20"
-              gap="12"
+              gap="8"
               border="neutral-alpha-weak"
               radius="m"
               background="page"
-              style={{ minWidth: "180px", flex: "0 0 auto" }}
+              style={{
+                minWidth: "180px",
+                flex: "0 0 auto",
+                padding: "24px",
+                height: "200px",
+              }}
             >
               <Flex
                 horizontal="center"
@@ -239,13 +243,18 @@ export default function Home() {
                   height: "40px",
                   borderRadius: "50%",
                   background: "var(--neutral-solid-medium)",
+                  flexShrink: 0,
                 }}
               >
                 <Icon name="check" size="s" onBackground="neutral-strong" />
               </Flex>
-              <Text variant="heading-strong-l">{metric.value}</Text>
-              <Text variant="label-strong-s">{metric.label}</Text>
-              <Text variant="body-default-xs" onBackground="neutral-weak">
+              <Text style={{ fontSize: "36px", fontWeight: "bold", lineHeight: 1.1 }}>
+                {metric.value}
+              </Text>
+              <Text style={{ fontSize: "16px", fontWeight: "bold" }}>
+                {metric.label}
+              </Text>
+              <Text style={{ fontSize: "13px", color: "var(--neutral-on-background-weak)" }}>
                 {metric.description}
               </Text>
             </Column>

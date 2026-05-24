@@ -147,8 +147,7 @@ export default function Home() {
               onBackground="neutral-weak"
               style={{ maxWidth: "480px" }}
             >
-              I help startups and consumer brands scale through partnerships,
-              community-led growth, and cross-border operations between Asia and the US.
+              Based in Irvine, CA, I work across venture capital, ecommerce, and startup ecosystems to help businesses scale through partnerships, community-led growth, and operational expansion. My experience spans investor ecosystems, ecommerce operations, community initiatives, and cross-border commerce between Asia and the US.
             </Text>
           </RevealFx>
           <RevealFx translateY="4" delay={0.4}>

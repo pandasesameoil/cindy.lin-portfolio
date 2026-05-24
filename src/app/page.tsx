@@ -194,11 +194,11 @@ export default function Home() {
             </Row>
           </RevealFx>
         </Column>
-        <RevealFx translateY="8" delay={0.3} style={{ flex: 1 }}>
-          <Flex horizontal="center" s={{ horizontal: "center" }}>
+        <Flex flex={1} horizontal="end" vertical="center" s={{ horizontal: "center" }}>
+          <RevealFx translateY="8" delay={0.3}>
             <Avatar src={person.avatar} size="xl" style={{ width: "320px", height: "320px" }} />
-          </Flex>
-        </RevealFx>
+          </RevealFx>
+        </Flex>
       </Row>
 
       {/* Impact at a Glance */}

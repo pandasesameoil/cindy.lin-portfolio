@@ -116,22 +116,6 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .hero-container {
-            flex-direction: column-reverse !important;
-          }
-          .hero-avatar-container {
-            padding-right: 0 !important;
-            justify-content: center !important;
-            margin-bottom: 24px;
-          }
-          .hero-avatar-container :global(.Avatar) {
-            width: 160px !important;
-            height: 160px !important;
-          }
-        }
-      `}</style>
       <Row fillWidth gap="48" vertical="center" s={{ direction: "column" }} className="hero-container">
         <Column flex={1} gap="20">
           <RevealFx translateY="4">
@@ -211,56 +195,6 @@ export default function Home() {
       </Row>
 
       {/* Stats Row */}
-      <style jsx>{`
-        .stats-grid {
-          display: grid;
-          grid-template-columns: repeat(6, minmax(0, 1fr));
-          align-items: start;
-          width: 100%;
-        }
-        .stats-grid .stat-item {
-          display: grid;
-          grid-template-rows: auto auto;
-          text-align: center;
-          padding: 0 16px;
-          border-right: 1px solid var(--neutral-alpha-weak);
-        }
-        .stats-grid .stat-item:last-child {
-          border-right: none;
-        }
-        .stats-grid .stat-value {
-          font-size: 36px;
-          font-weight: bold;
-          line-height: 1.1;
-        }
-        .stats-grid .stat-label {
-          font-size: 14px;
-          color: var(--neutral-on-background-weak);
-        }
-        @media (max-width: 768px) {
-          .stats-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0;
-          }
-          .stats-grid .stat-item {
-            padding: 12px 8px;
-            border-right: none;
-            border-bottom: 1px solid var(--neutral-alpha-weak);
-          }
-          .stats-grid .stat-item:nth-child(odd) {
-            border-right: 1px solid var(--neutral-alpha-weak);
-          }
-          .stats-grid .stat-item:nth-last-child(-n+2) {
-            border-bottom: none;
-          }
-          .stats-grid .stat-value {
-            font-size: 24px;
-          }
-          .stats-grid .stat-label {
-            font-size: 11px;
-          }
-        }
-      `}</style>
       <div className="stats-grid">
         {impactMetrics.slice(0, 6).map((metric, index) => (
           <div key={index} className="stat-item">

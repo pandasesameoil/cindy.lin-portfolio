@@ -41,15 +41,15 @@ const featuredProjects: FeaturedProject[] = [
   },
   {
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
-    title: "Event Operations & Community Building",
-    tag: "IRVINE TECH DAY",
+    title: "Amazon Marketplace & Consumer Brand Operations",
+    tag: "ECOMART",
     description:
-      "Coordinated multi-venue innovation events, partnered with startups, sponsors, and city officials to drive engagement and visibility.",
-    link: "/work/scaling-startup-communities-and-partnerships-at-sunstone-vc",
+      "Managed Amazon Seller Central and Vendor Central operations for Ecomart across 20+ SKUs, optimizing product listings, PPC strategy, and marketplace growth to scale consumer brands from launch stage to $130K+ in annual revenue.",
+    link: "/work/ecomart-consumer-brand-growth",
     stats: [
-      { icon: "calendar", value: "40+", label: "Demo Days" },
-      { icon: "users", value: "2,000+", label: "Attendees" },
-      { icon: "handshake", value: "20+", label: "Partners" },
+      { icon: "grid", value: "20+", label: "SKUs Managed" },
+      { icon: "dollar", value: "$130K+", label: "Annual Revenue" },
+      { icon: "users", value: "4", label: "Consumer Brands" },
     ],
   },
 ];

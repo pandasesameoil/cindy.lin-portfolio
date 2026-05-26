@@ -29,10 +29,10 @@ export const featuredProjects: FeaturedProject[] = [
   },
   {
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
-    title: "Ecomart",
-    tag: "Consumer Brand Growth & Marketplace Operations",
+    title: "Amazon Marketplace & Consumer Brand Operations",
+    tag: "Amazon Marketplace & E-Commerce Operations",
     description:
-      "Managed operations for 4 consumer brands and 20+ SKUs across Amazon Seller Central, Vendor Central, and Shopify, helping brands grow from launch stage to $130K+ in annual revenue.",
+      "Managed Amazon Seller Central and Vendor Central operations for Ecomart across 20+ SKUs, optimizing product listings, PPC strategy, and marketplace growth to scale consumer brands from launch stage to $130K+ in annual revenue.",
     link: "/work/ecomart-consumer-brand-growth",
   },
 ];

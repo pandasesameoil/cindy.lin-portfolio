@@ -96,7 +96,7 @@ const ecosystemsImPartOf = [
 const person: Person = {
   firstName: "Cindy",
   lastName: "Lin",
-  name: `Hsin-Yi (Cindy) Lin`,
+  name: `Cindy Lin`,
   role: "GTM & Ecosystem Operator | Partnerships, Community-Led Growth, and Cross-Border Commerce",
   avatar: "/images/avatar.jpg",
   email: "panda.sesameoil@gmail.com",

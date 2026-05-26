@@ -1,6 +1,7 @@
 "use client";
 
 import { Column, Text, Icon, Flex, SmartLink } from "@once-ui-system/core";
+import Image from "next/image";
 
 interface FeaturedProject {
   image: string;
@@ -112,14 +113,17 @@ export function FeaturedWorkCarousel() {
                   overflow: "hidden",
                 }}
               >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={400}
+                height={180}
                 style={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
                 }}
+                unoptimized
               />
               {/* Dark overlay */}
               <Flex

@@ -1,6 +1,7 @@
 "use client";
 
 import { Column, Row, Text, Icon, Flex, SmartLink } from "@once-ui-system/core";
+import Image from "next/image";
 
 interface FeaturedProject {
   image: string;
@@ -66,14 +67,17 @@ export function FeaturedWorkGrid() {
                 flexShrink: 0,
               }}
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={400}
+                height={280}
                 style={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
                 }}
+                unoptimized
               />
             </Flex>
 

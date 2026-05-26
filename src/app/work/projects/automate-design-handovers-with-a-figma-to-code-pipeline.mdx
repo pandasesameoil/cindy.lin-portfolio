@@ -1,5 +1,5 @@
 ---
-title: "How I Helped Build Consumer Brands From 0 to Revenue"
+title: "Automating Design Handovers with a Figma to Code Pipeline"
 publishedAt: "2024-04-01"
 summary: "Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think."
 images:
@@ -15,48 +15,30 @@ link: "https://once-ui.com/"
 
 ## Overview
 
-Over the past few years, I've worked across Amazon Seller Central, Vendor Central, Shopify, and early-stage product launch initiatives for multiple consumer brands.
+In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated workflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
 
-Most people see e-commerce as product listings, ads, and sales numbers. What interested me more was understanding why certain products gain traction while others struggle — even when they have traffic, advertising spend, or strong reviews behind them.
+## Key Features
 
-Through managing operations for **4** consumer brands and **20+** SKUs, I became increasingly interested in the relationship between product positioning, customer behavior, operational execution, and marketplace dynamics.
+- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
+- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
+- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
+- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
 
-Two of the brands I supported grew from launch-stage businesses into brands generating over **$130K** in annual revenue.
+## Technologies Used
 
-A lot of that growth came from work that wasn't particularly glamorous: rewriting listings, analyzing customer reviews, researching competitors, adjusting positioning strategies, reallocating PPC spend, and continuously testing how customers responded to different product messaging.
+- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
+- **React and Next.js**: For building the front-end codebase with clean, reusable components.
+- **Styled-Components**: For managing styles dynamically using design tokens.
+- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
 
-Over time, I realized successful marketplace growth is rarely driven by advertising alone. Most products succeed or fail because of a combination of customer trust, positioning clarity, operational consistency, category competition, fulfillment execution, and long-term scalability.
+## Challenges and Learnings
 
-## Learning Through Both Seller and Vendor Ecosystems
+One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
 
-One of the most valuable experiences for me was working across both Amazon Seller Central and Vendor Central.
+## Outcome
 
-Seller operations taught me marketplace growth, direct-to-consumer positioning, PPC optimization, conversion-focused merchandising, and storefront management.
+The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
 
-Vendor operations exposed me to a completely different side of e-commerce: wholesale purchasing workflows, purchase order coordination, inventory planning, manufacturer communication, and retail-side scaling.
+---
 
-That experience changed how I viewed Amazon entirely. I stopped seeing it as simply an online marketplace and started seeing it as a large operational ecosystem connecting products, logistics, retail infrastructure, and customer behavior at scale.
-
-## Working Across Emerging Consumer Product Categories
-
-I've also worked on several early-stage consumer product initiatives tied to online CES-related launches, including hearing amplifiers, home wind turbines, animal repellent products, and other niche consumer utility categories.
-
-These projects involved much more than uploading products online. A large portion of the work happened before launch: category research, supplier sourcing, pricing evaluation, product positioning, compliance analysis, customer education strategy, and go-to-market planning.
-
-Those experiences taught me that many launch outcomes are determined long before advertising campaigns begin.
-
-## Learning From Products That Never Launched
-
-Not every project succeeded. I also worked on a Kickstarter initiative involving market research, supplier sourcing, campaign planning, and platform compliance evaluation. The campaign ultimately never launched because the product failed to meet platform requirements.
-
-At the time, it felt disappointing. But looking back, it became one of the experiences that taught me the most about operational judgment and product feasibility. It forced me to think beyond growth metrics and ask: Does the product realistically fit the platform? Can it scale operationally? Will customers trust it long term? Is the opportunity sustainable beyond initial demand?
-
-That experience reinforced something I've learned repeatedly while working in e-commerce: Good operators don't just focus on scaling products. They also understand when not to scale.
-
-## What I'm Interested in Building Next
-
-The part of e-commerce I've become most interested in sits at the intersection of consumer products, marketplace strategy, operational execution, and early-stage growth.
-
-I'm especially drawn to environments where products are still being shaped — where teams are testing positioning, solving operational bottlenecks, entering new channels, and figuring out how products earn trust inside competitive marketplaces.
-
-That's the kind of work I want to continue building around.
+This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.

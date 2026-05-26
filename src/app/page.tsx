@@ -184,13 +184,6 @@ export default function Home() {
                     tooltip={item.name}
                   />
                 ))}
-              <IconButton
-                href="https://www.instagram.com/cindylin"
-                icon="instagram"
-                variant="ghost"
-                size="m"
-                tooltip="Instagram"
-              />
             </Row>
           </RevealFx>
         </Column>

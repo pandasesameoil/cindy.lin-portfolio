@@ -293,135 +293,121 @@ export default function Home() {
           </Text>
         </Column>
         
-        <Row gap="32" fillWidth s={{ direction: "column" }}>
-          {/* Experiences I Built */}
-          <Column gap="16" style={{ flex: 1 }}>
-            <Column gap="4">
-              <Text variant="heading-strong-s">Experiences I Built</Text>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                Programs, partnerships, and community experiences I helped create and lead.
-              </Text>
-            </Column>
-            <Row gap="8" fillWidth>
+        {/* Experiences I Built */}
+        <Column gap="16" fillWidth>
+          <Column gap="4">
+            <Text variant="heading-strong-s">Experiences I Built</Text>
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              Programs, partnerships, and community experiences I helped create and lead.
+            </Text>
+          </Column>
+          <Column gap="12" fillWidth>
+            <Row gap="12" fillWidth>
               {[
-                { image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80", title: "SUNSTONE STAGE", subtitle: "DEMO CONNECTS" },
-                { image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80", title: "IRVINE", subtitle: "TECH DAY" },
-                { image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80", title: "IRVINE", subtitle: "DREAM RUN" },
-                { image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80", title: "INVESTOR YACHT", subtitle: "NETWORKING" },
-                { image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80", title: "FOUNDER", subtitle: "ROUNDTABLES" },
-              ].map((exp, index) => (
+                "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
+                "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80",
+              ].map((image, index) => (
                 <Flex
                   key={index}
-                  radius="m"
                   style={{
-                    position: "relative",
                     flex: 1,
-                    minWidth: 0,
                     aspectRatio: "4/3",
+                    borderRadius: "14px",
                     overflow: "hidden",
                   }}
                 >
                   <img
-                    src={exp.image}
-                    alt={exp.title}
+                    src={image}
+                    alt={`Experience ${index + 1}`}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
-                  <Flex
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%)",
-                    }}
-                  />
-                  <Column
-                    gap="0"
-                    style={{
-                      position: "absolute",
-                      bottom: "8px",
-                      left: "8px",
-                      right: "8px",
-                    }}
-                  >
-                    <Text variant="label-strong-xs" style={{ color: "white", fontSize: "9px", lineHeight: 1.2 }}>
-                      {exp.title}
-                    </Text>
-                    <Text variant="body-default-xs" style={{ color: "rgba(255,255,255,0.8)", fontSize: "8px" }}>
-                      {exp.subtitle}
-                    </Text>
-                  </Column>
                 </Flex>
               ))}
             </Row>
+            <Row gap="12" fillWidth>
+              {[
+                "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80",
+                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+              ].map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image}
+                    alt={`Experience ${index + 4}`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </Flex>
+              ))}
+              <Flex style={{ flex: 1 }} />
+            </Row>
           </Column>
+        </Column>
 
-          {/* Ecosystems I'm Part Of */}
-          <Column gap="16" style={{ flex: 1 }}>
-            <Column gap="4">
-              <Text variant="heading-strong-s">Ecosystems I&apos;m Part Of</Text>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                Industry conferences, founder communities, and networks I actively engage with.
-              </Text>
-            </Column>
-            <Row gap="8" fillWidth>
+        {/* Ecosystems I'm Part Of */}
+        <Column gap="16" fillWidth>
+          <Column gap="4">
+            <Text variant="heading-strong-s">Ecosystems I&apos;m Part Of</Text>
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              Industry conferences, founder communities, and networks I actively engage with.
+            </Text>
+          </Column>
+          <Column gap="12" fillWidth>
+            <Row gap="12" fillWidth>
               {[
-                { image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", title: "NVIDIA GTC" },
-                { image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80", title: "CES" },
-                { image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80", title: "TECHCRUNCH DISRUPT" },
-                { image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80", title: "STARTUP GRIND" },
-                { image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80", title: "FOUNDER DINNERS" },
-              ].map((eco, index) => (
+                "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+                "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
+                "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+              ].map((image, index) => (
                 <Flex
                   key={index}
-                  radius="m"
                   style={{
-                    position: "relative",
                     flex: 1,
-                    minWidth: 0,
                     aspectRatio: "4/3",
+                    borderRadius: "14px",
                     overflow: "hidden",
                   }}
                 >
                   <img
-                    src={eco.image}
-                    alt={eco.title}
+                    src={image}
+                    alt={`Ecosystem ${index + 1}`}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
-                  <Flex
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%)",
-                    }}
-                  />
-                  <Column
-                    horizontal="center"
-                    vertical="center"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                    }}
-                  >
-                    <Text
-                      variant="label-strong-xs"
-                      style={{ color: "white", textAlign: "center", fontSize: "9px", padding: "4px" }}
-                    >
-                      {eco.title}
-                    </Text>
-                  </Column>
                 </Flex>
               ))}
             </Row>
+            <Row gap="12" fillWidth>
+              {[
+                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
+                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
+              ].map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image}
+                    alt={`Ecosystem ${index + 4}`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </Flex>
+              ))}
+              <Flex style={{ flex: 1 }} />
+            </Row>
           </Column>
-        </Row>
+        </Column>
       </Column>
 
       {/* Skills & Tools */}

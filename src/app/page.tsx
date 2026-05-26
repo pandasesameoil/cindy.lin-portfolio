@@ -202,18 +202,34 @@ export default function Home() {
       </Row>
 
       {/* Stats Row */}
-      <Row fillWidth horizontal="space-between">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(6, minmax(0, 1fr))",
+          alignItems: "start",
+          width: "100%",
+        }}
+      >
         {impactMetrics.slice(0, 6).map((metric, index) => (
-          <Column key={index} gap="4" horizontal="center" style={{ textAlign: "center" }}>
+          <div
+            key={index}
+            style={{
+              display: "grid",
+              gridTemplateRows: "auto auto",
+              textAlign: "center",
+              padding: "0 16px",
+              borderRight: index < 5 ? "1px solid var(--neutral-alpha-weak)" : "none",
+            }}
+          >
             <Text style={{ fontSize: "36px", fontWeight: "bold", lineHeight: 1.1 }}>
               {metric.value}
             </Text>
             <Text style={{ fontSize: "14px", color: "var(--neutral-on-background-weak)" }}>
               {metric.label}
             </Text>
-          </Column>
+          </div>
         ))}
-      </Row>
+      </div>
 
       {/* Featured Work */}
       <Column fillWidth gap="24">

@@ -354,9 +354,9 @@ export default function Home() {
           <Column gap="12" fillWidth>
             <Row gap="12" fillWidth>
               {[
-                "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
-                "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
-                "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13.png-CH3XwPNn1w0wpKPkD8znUMpaEv9mwJ.jpeg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14.png-L98dr049lH4EK6nWQvHFNYHWNVzbIx.jpeg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9.png-Qk0aI2zsmCk8a7AwtDl47AcaqZc4Qq.jpeg",
               ].map((image, index) => (
                 <Flex
                   key={index}
@@ -377,8 +377,9 @@ export default function Home() {
             </Row>
             <Row gap="12" fillWidth>
               {[
-                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
-                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/16.png-V7PKusK4U0zfUqgcrgli1nQQYhte7U.jpeg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11.png-fAphChoq6i1dSBBZW7iDLbnIphADBQ.jpeg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/17.png-F3D5lH3J0CGBeXhFX7OVNLkuc53NWc.jpeg",
               ].map((image, index) => (
                 <Flex
                   key={index}
@@ -392,6 +393,28 @@ export default function Home() {
                   <img
                     src={image}
                     alt={`Ecosystem ${index + 4}`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
+                  />
+                </Flex>
+              ))}
+            </Row>
+            <Row gap="12" fillWidth>
+              {[
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10.png-2VB8Hjf1mVQxH67SgdpNhgn1tEXD5O.jpeg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.png-myAgdAQjtHbfwdY1YryCSbydmwcrEd.jpeg",
+              ].map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image}
+                    alt={`Ecosystem ${index + 7}`}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>

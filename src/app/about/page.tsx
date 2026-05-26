@@ -130,20 +130,21 @@ export default function About() {
                 />
               </Row>
             )}
-            <Heading className={styles.textAlign} variant="display-strong-xl">
+            <Heading className={styles.textAlign} variant="display-strong-l" style={{ marginTop: "16px", marginBottom: "12px" }}>
               {person.name}
             </Heading>
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
               onBackground="neutral-weak"
+              style={{ marginBottom: "8px" }}
             >
               {person.role}
             </Text>
             {social.length > 0 && (
               <Row
                 className={styles.blockAlign}
-                paddingTop="20"
+                paddingTop="24"
                 paddingBottom="8"
                 gap="8"
                 wrap

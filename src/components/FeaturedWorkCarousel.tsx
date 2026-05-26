@@ -1,6 +1,6 @@
 "use client";
 
-import { Column, Row, Text, Icon, Flex, SmartLink } from "@once-ui-system/core";
+import { Column, Text, Icon, Flex, SmartLink } from "@once-ui-system/core";
 
 interface FeaturedProject {
   image: string;
@@ -56,32 +56,62 @@ const featuredProjects: FeaturedProject[] = [
 
 export function FeaturedWorkCarousel() {
   return (
-    <Row gap="16" fillWidth>
-      {featuredProjects.map((project, index) => (
-        <SmartLink
-          key={index}
-          href={project.link}
-          style={{ textDecoration: "none", flex: 1, minWidth: 0 }}
-        >
-          <Column
-            border="neutral-alpha-weak"
-            radius="l"
-            style={{
-              overflow: "hidden",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-              background: "var(--page-background)",
-              height: "100%",
-            }}
+    <>
+      <style jsx global>{`
+        .featured-work-container {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          width: 100%;
+        }
+        .featured-work-card {
+          flex: 1;
+          min-width: 0;
+        }
+        .featured-work-image {
+          height: 180px;
+        }
+        @media (max-width: 768px) {
+          .featured-work-container {
+            flex-direction: column;
+          }
+          .featured-work-card {
+            width: 100%;
+            flex: none;
+          }
+          .featured-work-image {
+            height: auto;
+            aspect-ratio: 16 / 9;
+          }
+        }
+      `}</style>
+      <div className="featured-work-container">
+        {featuredProjects.map((project, index) => (
+          <SmartLink
+            key={index}
+            href={project.link}
+            style={{ textDecoration: "none" }}
+            className="featured-work-card"
           >
-            {/* Image with overlay */}
-            <Flex
+            <Column
+              border="neutral-alpha-weak"
+              radius="l"
               style={{
-                position: "relative",
-                width: "100%",
-                height: "180px",
                 overflow: "hidden",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+                background: "var(--page-background)",
+                height: "100%",
               }}
             >
+              {/* Image with overlay */}
+              <Flex
+                className="featured-work-image"
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  overflow: "hidden",
+                }}
+              >
               <img
                 src={project.image}
                 alt={project.title}
@@ -184,8 +214,9 @@ export function FeaturedWorkCarousel() {
               </Column>
             </Column>
           </Column>
-        </SmartLink>
-      ))}
-    </Row>
+          </SmartLink>
+        ))}
+      </div>
+    </>
   );
 }

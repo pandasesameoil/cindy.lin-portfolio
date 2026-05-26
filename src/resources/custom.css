@@ -39,9 +39,13 @@ a:hover {
     justify-content: center !important;
     margin-bottom: 16px;
   }
-  .hero-avatar-container .Avatar {
-    width: 120px !important;
-    height: 120px !important;
+  .hero-avatar-container .Avatar,
+  .hero-avatar-container [class*="Avatar"],
+  .hero-avatar-container img {
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
   }
 }
 

@@ -10,8 +10,7 @@ a:hover {
 /* Global Mobile Padding - All Pages */
 @media (max-width: 768px) {
   .main-content-wrapper {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding: 32px 28px 100px 28px !important;
     box-sizing: border-box !important;
   }
   .page-container {
@@ -37,11 +36,16 @@ a:hover {
   .hero-avatar-container {
     padding-right: 0 !important;
     justify-content: center !important;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
-  .hero-avatar-container .Avatar {
-    width: 120px !important;
-    height: 120px !important;
+  .hero-avatar-container .Avatar,
+  .hero-avatar-container [class*="Avatar"],
+  .hero-avatar-container img {
+    width: 140px !important;
+    height: 140px !important;
+    max-width: 140px !important;
+    max-height: 140px !important;
+    border-radius: 50% !important;
   }
 }
 

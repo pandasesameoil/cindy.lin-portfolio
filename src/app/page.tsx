@@ -321,6 +321,7 @@ export default function Home() {
               {[
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19-9c9BIFVNADrsTezcE7Nmr10YlKJnUN.jpg",
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-D2iPuwyzijGQFK4DwS4aiJ6uHqcv1R.jpg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Subhead%201%20%28Bold%29-2-4QIzlZrnhMeQ66we978IqWG6fmu8Cm.jpg",
               ].map((image, index) => (
                 <Flex
                   key={index}
@@ -338,7 +339,6 @@ export default function Home() {
                   />
                 </Flex>
               ))}
-              <Flex style={{ flex: 1 }} />
             </Row>
           </Column>
         </Column>

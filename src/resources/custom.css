@@ -7,6 +7,21 @@ a:hover {
   color: #7DD3FC;
 }
 
+/* Global Mobile Padding - All Pages */
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .page-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .hero-container {
+    padding: 0 !important;
+  }
+}
+
 /* Hero Section Mobile Styles */
 @media (max-width: 768px) {
   .hero-container {

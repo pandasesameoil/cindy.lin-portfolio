@@ -12,7 +12,7 @@ interface FeaturedProject {
 
 export const featuredProjects: FeaturedProject[] = [
   {
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2026%2C%202026%20at%2012_18_56%20AM-vSC4WeJe7DJFn3AkoprcQ80vI9fBYN.png",
     title: "Sunstone Management VC",
     tag: "Investor Relations & Ecosystem Growth",
     description:
@@ -28,7 +28,7 @@ export const featuredProjects: FeaturedProject[] = [
     link: "/work/scaling-cross-border-commerce-at-ding-go",
   },
   {
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2025%2C%202026%20at%2011_54_18%20PM-h28lajkAwAFrtk2APUzIbsX2GZdlt6.png",
     title: "Amazon Marketplace & Consumer Brand Operations",
     tag: "Amazon Marketplace & E-Commerce Operations",
     description:

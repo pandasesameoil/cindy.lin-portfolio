@@ -146,18 +146,42 @@ export function FeaturedWorkCarousel() {
                 {project.description}
               </Text>
               
-              {/* Stats row */}
-              <Row gap="16" wrap style={{ marginTop: "auto", paddingTop: "12px" }}>
+              {/* Divider */}
+              <div style={{ 
+                width: "100%", 
+                height: "1px", 
+                backgroundColor: "#eee", 
+                marginTop: "auto" 
+              }} />
+              
+              {/* Stats column */}
+              <Column gap="7" style={{ paddingTop: "12px" }}>
                 {project.stats.map((stat, statIndex) => (
-                  <Row key={statIndex} gap="6" vertical="center">
-                    <Icon name="check" size="xs" style={{ color: "#B45309" }} />
-                    <Text variant="label-strong-xs">{stat.value}</Text>
+                  <Flex
+                    key={statIndex}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      gap: "6px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    <Icon 
+                      name="check" 
+                      size="xs" 
+                      style={{ 
+                        color: "#B45309", 
+                        width: "16px", 
+                        flexShrink: 0 
+                      }} 
+                    />
                     <Text variant="body-default-xs" onBackground="neutral-weak">
-                      {stat.label}
+                      <strong>{stat.value}</strong> {stat.label}
                     </Text>
-                  </Row>
+                  </Flex>
                 ))}
-              </Row>
+              </Column>
             </Column>
           </Column>
         </SmartLink>

@@ -233,7 +233,7 @@ export default function Home() {
 
       {/* Featured Work */}
       <Column fillWidth gap="24">
-        <Row fillWidth horizontal="space-between" vertical="center">
+        <Row fillWidth horizontal="between" vertical="center">
           <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
             FEATURED WORK
           </Text>
@@ -421,7 +421,7 @@ export default function Home() {
                 <Flex
                   key={skill}
                   paddingX="12"
-                  paddingY="6"
+                  paddingY="4"
                   border="neutral-alpha-weak"
                   radius="full"
                   background="page"
@@ -444,7 +444,7 @@ export default function Home() {
                 <Flex
                   key={tool}
                   paddingX="12"
-                  paddingY="6"
+                  paddingY="4"
                   border="neutral-alpha-weak"
                   radius="full"
                   background="page"

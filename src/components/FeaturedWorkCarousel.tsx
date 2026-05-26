@@ -155,7 +155,7 @@ export function FeaturedWorkCarousel() {
               }} />
               
               {/* Stats column */}
-              <Column gap="7" style={{ paddingTop: "12px" }}>
+              <Column gap="8" style={{ paddingTop: "12px" }}>
                 {project.stats.map((stat, statIndex) => (
                   <Flex
                     key={statIndex}

@@ -28,7 +28,7 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Row fillWidth horizontal="space-between" vertical="center">
+      <Row fillWidth horizontal="between" vertical="center">
         <Column gap="8">
           <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
             FEATURED WORK

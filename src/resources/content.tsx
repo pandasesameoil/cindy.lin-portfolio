@@ -100,7 +100,8 @@ const person: Person = {
   role: "GTM & Ecosystem Operator | Partnerships, Community-Led Growth, and Cross-Border Commerce",
   avatar: "/images/avatar.jpg",
   email: "panda.sesameoil@gmail.com",
-  location: "Cindy Lin", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "Cindy Lin",
+  timezone: "America/Los_Angeles", // IANA time zone identifier for TimeDisplay
   languages: ["English", "Chinese (Native)", "Japanese (Elementary)", "French (Elementary)"], // optional: Leave the array empty if you don't want to display languages
 };
 

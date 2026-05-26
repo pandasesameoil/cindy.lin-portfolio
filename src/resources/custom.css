@@ -71,6 +71,41 @@ a:hover {
   align-items: start;
   width: 100%;
 }
+
+/* Work Grid Mobile Styles */
+@media (max-width: 768px) {
+  .work-grid-container {
+    gap: 24px !important;
+  }
+  .work-card {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .work-card-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
+  .work-card-content {
+    width: 100% !important;
+    padding: 16px !important;
+  }
+  .work-card-title {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+  .work-card-tag {
+    font-size: 13px !important;
+  }
+  .work-card-description {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  .work-card-link {
+    margin-top: 12px !important;
+    padding-top: 0 !important;
+  }
+}
 .stats-grid .stat-item {
   display: grid;
   grid-template-rows: auto auto;

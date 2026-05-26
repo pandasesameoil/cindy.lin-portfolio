@@ -131,10 +131,10 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/opengraph-image",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `Cindy Lin - Portfolio`,
+  description: `GTM & Ecosystem Operator specializing in Venture Capital, Startup Ecosystems, and E-Commerce. Partnerships, Community-Led Growth, and Cross-Border Commerce.`,
   headline: <>Scaling businesses through partnerships and growth</>,
   featured: {
     display: false,

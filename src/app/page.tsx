@@ -289,7 +289,7 @@ export default function Home() {
                   <img
                     src={image}
                     alt={`Experience ${index + 1}`}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                   />
                 </Flex>
               ))}
@@ -312,7 +312,7 @@ export default function Home() {
                   <img
                     src={image}
                     alt={`Experience ${index + 4}`}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                   />
                 </Flex>
               ))}
@@ -334,7 +334,7 @@ export default function Home() {
                   <img
                     src={image}
                     alt={`Experience ${index + 7}`}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                   />
                 </Flex>
               ))}
@@ -370,7 +370,7 @@ export default function Home() {
                   <img
                     src={image}
                     alt={`Ecosystem ${index + 1}`}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                   />
                 </Flex>
               ))}
@@ -392,7 +392,7 @@ export default function Home() {
                   <img
                     src={image}
                     alt={`Ecosystem ${index + 4}`}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                   />
                 </Flex>
               ))}

@@ -7,6 +7,149 @@ a:hover {
   color: #7DD3FC;
 }
 
+/* Global Mobile Padding - All Pages */
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+  .page-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* Ensure all direct children don't overflow */
+  .main-content-wrapper > * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Hero Section Mobile Styles */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse !important;
+  }
+  .hero-container > div:first-child {
+    padding: 0;
+  }
+  .hero-avatar-container {
+    padding-right: 0 !important;
+    justify-content: center !important;
+    margin-bottom: 16px;
+  }
+  .hero-avatar-container .Avatar {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
+
+/* Bottom Navigation Bar Mobile Styles */
+@media (max-width: 768px) {
+  header[data-border="rounded"] {
+    padding: 12px 0 !important;
+  }
+  header[data-border="rounded"] > div > div {
+    padding: 8px 12px !important;
+  }
+  header[data-border="rounded"] button,
+  header[data-border="rounded"] a[role="button"] {
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+  }
+  header[data-border="rounded"] svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+/* Stats Grid Styles */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  width: 100%;
+}
+
+/* Work Grid Mobile Styles */
+@media (max-width: 768px) {
+  .work-grid-container {
+    gap: 24px !important;
+  }
+  .work-card {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .work-card-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
+  .work-card-content {
+    width: 100% !important;
+    padding: 16px !important;
+  }
+  .work-card-title {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+  .work-card-tag {
+    font-size: 13px !important;
+  }
+  .work-card-description {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  .work-card-link {
+    margin-top: 12px !important;
+    padding-top: 0 !important;
+  }
+}
+.stats-grid .stat-item {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+  padding: 0 16px;
+  border-right: 1px solid var(--neutral-alpha-weak);
+}
+.stats-grid .stat-item:last-child {
+  border-right: none;
+}
+.stats-grid .stat-value {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.stats-grid .stat-label {
+  font-size: 14px;
+  color: var(--neutral-on-background-weak);
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .stats-grid .stat-item {
+    padding: 12px 8px;
+    border-right: none;
+    border-bottom: 1px solid var(--neutral-alpha-weak);
+  }
+  .stats-grid .stat-item:nth-child(odd) {
+    border-right: 1px solid var(--neutral-alpha-weak);
+  }
+  .stats-grid .stat-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  .stats-grid .stat-value {
+    font-size: 24px;
+  }
+  .stats-grid .stat-label {
+    font-size: 11px;
+  }
+}
+
 /* :root {
   /*
   /* Override default variables here */

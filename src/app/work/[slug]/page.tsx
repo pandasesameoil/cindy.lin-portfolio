@@ -4,7 +4,6 @@ import {
   Meta,
   Schema,
   AvatarGroup,
-  Button,
   Column,
   Flex,
   Heading,
@@ -12,8 +11,6 @@ import {
   Text,
   SmartLink,
   Row,
-  Avatar,
-  Line,
 } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
@@ -142,13 +139,6 @@ export default async function Project({
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
-      </Column>
-      <Column fillWidth gap="40" horizontal="center" marginTop="40">
-        <Line maxWidth="40" />
-        <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
-        </Heading>
-        <Projects exclude={[post.slug]} range={[2]} />
       </Column>
       <ScrollToHash />
     </Column>

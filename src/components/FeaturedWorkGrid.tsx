@@ -1,6 +1,7 @@
 "use client";
 
 import { Column, Row, Text, Icon, Flex, SmartLink } from "@once-ui-system/core";
+import Image from "next/image";
 
 interface FeaturedProject {
   image: string;
@@ -39,7 +40,7 @@ export const featuredProjects: FeaturedProject[] = [
 
 export function FeaturedWorkGrid() {
   return (
-    <Column fillWidth gap="24">
+    <Column fillWidth gap="24" className="work-grid-container">
       {featuredProjects.map((project, index) => (
         <SmartLink
           key={index}
@@ -50,6 +51,7 @@ export function FeaturedWorkGrid() {
             border="neutral-alpha-weak"
             radius="l"
             fillWidth
+            className="work-card"
             style={{
               height: "280px",
               overflow: "hidden",
@@ -59,6 +61,7 @@ export function FeaturedWorkGrid() {
           >
             {/* Image */}
             <Flex
+              className="work-card-image"
               style={{
                 width: "35%",
                 height: "280px",
@@ -66,28 +69,33 @@ export function FeaturedWorkGrid() {
                 flexShrink: 0,
               }}
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={400}
+                height={280}
                 style={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
                 }}
+                unoptimized
               />
             </Flex>
 
             {/* Content */}
             <Column
               gap="12"
+              className="work-card-content"
               style={{
                 width: "65%",
                 padding: "24px",
               }}
             >
-              <Text variant="heading-strong-l">{project.title}</Text>
+              <Text variant="heading-strong-l" className="work-card-title">{project.title}</Text>
               <Text
                 variant="label-default-s"
+                className="work-card-tag"
                 style={{
                   color: "#B45309",
                   letterSpacing: "0.03em",
@@ -98,11 +106,12 @@ export function FeaturedWorkGrid() {
               <Text
                 variant="body-default-m"
                 onBackground="neutral-weak"
+                className="work-card-description"
                 style={{ lineHeight: 1.6 }}
               >
                 {project.description}
               </Text>
-              <Row gap="4" vertical="center" paddingTop="8">
+              <Row gap="4" vertical="center" paddingTop="8" className="work-card-link">
                 <Text
                   variant="label-default-s"
                   style={{ color: "#38BDF8" }}

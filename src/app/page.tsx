@@ -116,7 +116,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <Row fillWidth gap="48" vertical="center" s={{ direction: "column" }}>
+      <Row fillWidth gap="48" vertical="center" s={{ direction: "column" }} className="hero-container">
         <Column flex={1} gap="20">
           <RevealFx translateY="4">
             <Text variant="body-default-m" onBackground="neutral-weak">
@@ -187,7 +187,7 @@ export default function Home() {
             </Row>
           </RevealFx>
         </Column>
-        <Flex flex={1} horizontal="end" vertical="center" s={{ horizontal: "center" }} style={{ paddingRight: "24px" }}>
+        <Flex flex={1} horizontal="end" vertical="center" s={{ horizontal: "center" }} style={{ paddingRight: "24px" }} className="hero-avatar-container">
           <RevealFx translateY="8" delay={0.3}>
             <Avatar src={person.avatar} size="xl" style={{ width: "320px", height: "320px" }} />
           </RevealFx>
@@ -195,29 +195,13 @@ export default function Home() {
       </Row>
 
       {/* Stats Row */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(6, minmax(0, 1fr))",
-          alignItems: "start",
-          width: "100%",
-        }}
-      >
+      <div className="stats-grid">
         {impactMetrics.slice(0, 6).map((metric, index) => (
-          <div
-            key={index}
-            style={{
-              display: "grid",
-              gridTemplateRows: "auto auto",
-              textAlign: "center",
-              padding: "0 16px",
-              borderRight: index < 5 ? "1px solid var(--neutral-alpha-weak)" : "none",
-            }}
-          >
-            <Text style={{ fontSize: "36px", fontWeight: "bold", lineHeight: 1.1 }}>
+          <div key={index} className="stat-item">
+            <Text className="stat-value">
               {metric.value}
             </Text>
-            <Text style={{ fontSize: "14px", color: "var(--neutral-on-background-weak)" }}>
+            <Text className="stat-label">
               {metric.label}
             </Text>
           </div>

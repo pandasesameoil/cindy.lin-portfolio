@@ -201,66 +201,19 @@ export default function Home() {
         </Flex>
       </Row>
 
-      {/* Impact at a Glance */}
-      <Column fillWidth gap="24">
-        <Row fillWidth horizontal="space-between" vertical="center">
-          <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
-            IMPACT AT A GLANCE
-          </Text>
-          <SmartLink href="/about">
-            <Row gap="4" vertical="center">
-              <Text variant="label-default-s" style={{ color: "#38BDF8" }}>
-                SEE ALL ACHIEVEMENTS
-              </Text>
-              <Icon name="arrowRight" size="s" style={{ color: "#38BDF8" }} />
-            </Row>
-          </SmartLink>
-        </Row>
-        <Row
-          gap="16"
-          fillWidth
-          style={{ overflowX: "auto", paddingBottom: "8px" }}
-        >
-          {impactMetrics.map((metric, index) => (
-            <Column
-              key={index}
-              gap="8"
-              border="neutral-alpha-weak"
-              radius="m"
-              background="page"
-              style={{
-                minWidth: "180px",
-                flex: "0 0 auto",
-                padding: "24px",
-                height: "200px",
-              }}
-            >
-              <Flex
-                horizontal="center"
-                vertical="center"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "50%",
-                  background: "var(--neutral-solid-medium)",
-                  flexShrink: 0,
-                }}
-              >
-                <Icon name="check" size="s" onBackground="neutral-strong" />
-              </Flex>
-              <Text style={{ fontSize: "36px", fontWeight: "bold", lineHeight: 1.1 }}>
-                {metric.value}
-              </Text>
-              <Text style={{ fontSize: "16px", fontWeight: "bold" }}>
-                {metric.label}
-              </Text>
-              <Text style={{ fontSize: "13px", color: "var(--neutral-on-background-weak)" }}>
-                {metric.description}
-              </Text>
-            </Column>
-          ))}
-        </Row>
-      </Column>
+      {/* Stats Row */}
+      <Row fillWidth horizontal="space-between">
+        {impactMetrics.slice(0, 6).map((metric, index) => (
+          <Column key={index} gap="4" horizontal="center" style={{ textAlign: "center" }}>
+            <Text style={{ fontSize: "36px", fontWeight: "bold", lineHeight: 1.1 }}>
+              {metric.value}
+            </Text>
+            <Text style={{ fontSize: "14px", color: "var(--neutral-on-background-weak)" }}>
+              {metric.label}
+            </Text>
+          </Column>
+        ))}
+      </Row>
 
       {/* Featured Work */}
       <Column fillWidth gap="24">

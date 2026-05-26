@@ -8,125 +8,160 @@ interface FeaturedProject {
   tag: string;
   description: string;
   link: string;
+  stats: { icon: string; value: string; label: string }[];
 }
 
 const featuredProjects: FeaturedProject[] = [
   {
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
-    title: "Sunstone Management VC",
-    tag: "Investor Relations & Ecosystem Growth",
+    title: "Venture Capital & Ecosystem Growth",
+    tag: "SUNSTONE MANAGEMENT",
     description:
-      "Facilitated $150M+ in investment deals, managed 16 funds & 100+ portfolio companies, and built 100+ events with 300–700+ attendees.",
+      "Built investor relations, managed 16 funds, organized 40+ events, and supported 300+ startups across North America & Asia.",
     link: "/work/scaling-startup-communities-and-partnerships-at-sunstone-vc",
+    stats: [
+      { icon: "dollar", value: "$150M+", label: "Deals Facilitated" },
+      { icon: "users", value: "2,000+", label: "Attendees" },
+      { icon: "calendar", value: "40+", label: "Events" },
+      { icon: "grid", value: "16", label: "Funds" },
+    ],
   },
   {
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2024%2C%202026%20at%2001_55_43%20AM-G4PViLkAg0upHn05RxT1SYKZKnSlq7.png",
-    title: "Ding-Go (BLIVE Global)",
-    tag: "E-commerce Growth & Operations",
+    title: "Cross-Border Ecommerce Growth",
+    tag: "DING-GO",
     description:
-      "Scaled monthly revenue from $2K to $30K in 7 months, reduced shipping time from 20 to 7 days, and generated 200K+ organic views through influencer campaigns.",
+      "Scaled Ding-Go from $2K to $30K monthly revenue through community-driven marketing, operational rebuild, and US market expansion.",
     link: "/work/scaling-cross-border-commerce-at-ding-go",
+    stats: [
+      { icon: "chart", value: "$2K→$30K", label: "Monthly Revenue" },
+      { icon: "chart", value: "15x", label: "Growth" },
+      { icon: "users", value: "300→1,200+", label: "Community" },
+    ],
   },
   {
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
-    title: "Irvine Tech Day",
-    tag: "Event & Community Leadership",
+    title: "Event Operations & Community Building",
+    tag: "IRVINE TECH DAY",
     description:
-      "Managed 38+ strategic partnerships and organized 100+ events, growing Irvine Dream Run from 300 to 1,200+ attendees across 3 annual events.",
+      "Coordinated multi-venue innovation events, partnered with startups, sponsors, and city officials to drive engagement and visibility.",
     link: "/work/scaling-startup-communities-and-partnerships-at-sunstone-vc",
+    stats: [
+      { icon: "calendar", value: "40+", label: "Demo Days" },
+      { icon: "users", value: "2,000+", label: "Attendees" },
+      { icon: "handshake", value: "20+", label: "Partners" },
+    ],
   },
 ];
 
 export function FeaturedWorkCarousel() {
   return (
-    <Row
-      id="carousel-container"
-      gap="24"
-      fillWidth
-      style={{
-        overflowX: "auto",
-        scrollBehavior: "smooth",
-        scrollSnapType: "x mandatory",
-        WebkitOverflowScrolling: "touch",
-        paddingBottom: "8px",
-      }}
-    >
-        {featuredProjects.map((project, index) => (
-          <SmartLink
-            key={index}
-            href={project.link}
-            style={{ textDecoration: "none", flex: "0 0 auto" }}
+    <Row gap="16" fillWidth>
+      {featuredProjects.map((project, index) => (
+        <SmartLink
+          key={index}
+          href={project.link}
+          style={{ textDecoration: "none", flex: 1, minWidth: 0 }}
+        >
+          <Column
+            border="neutral-alpha-weak"
+            radius="l"
+            style={{
+              overflow: "hidden",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+              background: "var(--page-background)",
+              height: "100%",
+            }}
           >
-            <Row
-              border="neutral-alpha-weak"
-              radius="l"
+            {/* Image with overlay */}
+            <Flex
               style={{
-                width: "min(600px, 85vw)",
-                height: "280px",
+                position: "relative",
+                width: "100%",
+                height: "180px",
                 overflow: "hidden",
-                scrollSnapAlign: "start",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-                background: "var(--page-background)",
               }}
             >
-              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.title}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+              {/* Dark overlay */}
               <Flex
                 style={{
-                  width: "35%",
-                  height: "280px",
-                  overflow: "hidden",
-                  flexShrink: 0,
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%)",
                 }}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
-              </Flex>
-
-              {/* Content */}
-              <Column
-                gap="12"
+              />
+              {/* Company name top-left */}
+              <Flex
                 style={{
-                  width: "65%",
-                  padding: "24px",
+                  position: "absolute",
+                  top: "12px",
+                  left: "12px",
                 }}
               >
-                <Text variant="heading-strong-m">{project.title}</Text>
                 <Text
-                  variant="label-default-xs"
-                  style={{
-                    color: "#B45309",
-                    letterSpacing: "0.03em",
-                  }}
+                  variant="label-strong-xs"
+                  style={{ color: "white", letterSpacing: "0.05em" }}
                 >
                   {project.tag}
                 </Text>
-                <Text
-                  variant="body-default-s"
-                  onBackground="neutral-weak"
-                  style={{ lineHeight: 1.5 }}
-                >
-                  {project.description}
-                </Text>
-                <Row gap="4" vertical="center" paddingTop="8">
-                  <Text
-                    variant="label-default-s"
-                    style={{ color: "#38BDF8" }}
-                  >
-                    View Case Study
-                  </Text>
-                  <Icon name="arrowRight" size="xs" style={{ color: "#38BDF8" }} />
-                </Row>
-              </Column>
-        </Row>
-      </SmartLink>
-    ))}
-  </Row>
+              </Flex>
+              {/* Arrow button top-right */}
+              <Flex
+                horizontal="center"
+                vertical="center"
+                style={{
+                  position: "absolute",
+                  top: "12px",
+                  right: "12px",
+                  width: "32px",
+                  height: "32px",
+                  borderRadius: "50%",
+                  background: "white",
+                }}
+              >
+                <Icon name="arrowUpRight" size="xs" />
+              </Flex>
+            </Flex>
+
+            {/* Content */}
+            <Column gap="12" style={{ padding: "16px", flex: 1 }}>
+              <Text variant="heading-strong-s">{project.title}</Text>
+              <Text
+                variant="body-default-s"
+                onBackground="neutral-weak"
+                style={{ lineHeight: 1.5 }}
+              >
+                {project.description}
+              </Text>
+              
+              {/* Stats row */}
+              <Row gap="16" wrap style={{ marginTop: "auto", paddingTop: "12px" }}>
+                {project.stats.map((stat, statIndex) => (
+                  <Row key={statIndex} gap="6" vertical="center">
+                    <Icon name="check" size="xs" style={{ color: "#B45309" }} />
+                    <Text variant="label-strong-xs">{stat.value}</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-weak">
+                      {stat.label}
+                    </Text>
+                  </Row>
+                ))}
+              </Row>
+            </Column>
+          </Column>
+        </SmartLink>
+      ))}
+    </Row>
   );
 }

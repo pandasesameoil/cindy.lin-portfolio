@@ -8,6 +8,8 @@ export {
   blog,
   work,
   gallery,
+  experiencesIBuilt,
+  ecosystemsImPartOf,
 } from "./content";
 
 export {

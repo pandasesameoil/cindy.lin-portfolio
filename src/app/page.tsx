@@ -13,7 +13,7 @@ import {
   SmartLink,
   Flex,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, social, gallery } from "@/resources";
+import { home, about, person, baseURL, social, experiencesIBuilt, ecosystemsImPartOf } from "@/resources";
 import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
 
 export async function generateMetadata() {
@@ -201,66 +201,35 @@ export default function Home() {
         </Flex>
       </Row>
 
-      {/* Impact at a Glance */}
-      <Column fillWidth gap="24">
-        <Row fillWidth horizontal="space-between" vertical="center">
-          <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
-            IMPACT AT A GLANCE
-          </Text>
-          <SmartLink href="/about">
-            <Row gap="4" vertical="center">
-              <Text variant="label-default-s" style={{ color: "#38BDF8" }}>
-                SEE ALL ACHIEVEMENTS
-              </Text>
-              <Icon name="arrowRight" size="s" style={{ color: "#38BDF8" }} />
-            </Row>
-          </SmartLink>
-        </Row>
-        <Row
-          gap="16"
-          fillWidth
-          style={{ overflowX: "auto", paddingBottom: "8px" }}
-        >
-          {impactMetrics.map((metric, index) => (
-            <Column
-              key={index}
-              gap="8"
-              border="neutral-alpha-weak"
-              radius="m"
-              background="page"
-              style={{
-                minWidth: "180px",
-                flex: "0 0 auto",
-                padding: "24px",
-                height: "200px",
-              }}
-            >
-              <Flex
-                horizontal="center"
-                vertical="center"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "50%",
-                  background: "var(--neutral-solid-medium)",
-                  flexShrink: 0,
-                }}
-              >
-                <Icon name="check" size="s" onBackground="neutral-strong" />
-              </Flex>
-              <Text style={{ fontSize: "36px", fontWeight: "bold", lineHeight: 1.1 }}>
-                {metric.value}
-              </Text>
-              <Text style={{ fontSize: "16px", fontWeight: "bold" }}>
-                {metric.label}
-              </Text>
-              <Text style={{ fontSize: "13px", color: "var(--neutral-on-background-weak)" }}>
-                {metric.description}
-              </Text>
-            </Column>
-          ))}
-        </Row>
-      </Column>
+      {/* Stats Row */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(6, minmax(0, 1fr))",
+          alignItems: "start",
+          width: "100%",
+        }}
+      >
+        {impactMetrics.slice(0, 6).map((metric, index) => (
+          <div
+            key={index}
+            style={{
+              display: "grid",
+              gridTemplateRows: "auto auto",
+              textAlign: "center",
+              padding: "0 16px",
+              borderRight: index < 5 ? "1px solid var(--neutral-alpha-weak)" : "none",
+            }}
+          >
+            <Text style={{ fontSize: "36px", fontWeight: "bold", lineHeight: 1.1 }}>
+              {metric.value}
+            </Text>
+            <Text style={{ fontSize: "14px", color: "var(--neutral-on-background-weak)" }}>
+              {metric.label}
+            </Text>
+          </div>
+        ))}
+      </div>
 
       {/* Featured Work */}
       <Column fillWidth gap="24">
@@ -282,62 +251,154 @@ export default function Home() {
         </RevealFx>
       </Column>
 
-      {/* Gallery Preview - Moments from the Journey */}
+      {/* A Glimpse of My Journey */}
       <Column fillWidth gap="24">
-        <Row fillWidth horizontal="space-between" vertical="center">
-          <Text variant="label-strong-s" style={{ letterSpacing: "0.1em" }}>
-            MOMENTS FROM THE JOURNEY
+        <Column gap="8" horizontal="center" style={{ textAlign: "center" }}>
+          <Heading variant="heading-strong-l" style={{ fontStyle: "italic" }}>
+            A Glimpse of My Journey
+          </Heading>
+          <Text variant="body-default-m" onBackground="neutral-weak" style={{ maxWidth: "600px" }}>
+            Experiences across venture capital, startup ecosystems, partnerships, and community-building.
           </Text>
-          <SmartLink href="/gallery">
-            <Row gap="4" vertical="center">
-              <Text variant="label-default-s" style={{ color: "#38BDF8" }}>
-                VIEW FULL GALLERY
-              </Text>
-              <Icon name="arrowRight" size="s" style={{ color: "#38BDF8" }} />
+        </Column>
+        
+        {/* Experiences I Built */}
+        <Column gap="16" fillWidth>
+          <Column gap="4">
+            <Text variant="heading-strong-s">Experiences I Built</Text>
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              Programs, partnerships, and community experiences I helped create and lead.
+            </Text>
+          </Column>
+          <Column gap="12" fillWidth>
+            <Row gap="12" fillWidth>
+              {experiencesIBuilt.slice(0, 3).map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
+                  />
+                </Flex>
+              ))}
             </Row>
-          </SmartLink>
-        </Row>
-        <Column gap="12">
-          <Row gap="12" fillWidth>
-            {gallery.images.slice(0, 3).map((image, index) => (
-              <SmartLink key={index} href="/gallery" style={{ flex: 1 }}>
+            <Row gap="12" fillWidth>
+              {experiencesIBuilt.slice(3, 6).map((image, index) => (
                 <Flex
-                  radius="m"
+                  key={index}
                   style={{
-                    height: "200px",
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
                     overflow: "hidden",
-                    cursor: "pointer",
                   }}
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>
-              </SmartLink>
-            ))}
-          </Row>
-          <Row gap="12" fillWidth>
-            {gallery.images.slice(3, 6).map((image, index) => (
-              <SmartLink key={index} href="/gallery" style={{ flex: 1 }}>
+              ))}
+            </Row>
+            <Row gap="12" fillWidth>
+              {experiencesIBuilt.slice(6, 9).map((image, index) => (
                 <Flex
-                  radius="m"
+                  key={index}
                   style={{
-                    height: "200px",
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
                     overflow: "hidden",
-                    cursor: "pointer",
                   }}
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>
-              </SmartLink>
-            ))}
-          </Row>
+              ))}
+            </Row>
+          </Column>
+        </Column>
+
+        {/* Ecosystems I'm Part Of */}
+        <Column gap="16" fillWidth>
+          <Column gap="4">
+            <Text variant="heading-strong-s">Ecosystems I&apos;m Part Of</Text>
+            <Text variant="body-default-s" onBackground="neutral-weak">
+              Industry conferences, founder communities, and networks I actively engage with.
+            </Text>
+          </Column>
+          <Column gap="12" fillWidth>
+            <Row gap="12" fillWidth>
+              {ecosystemsImPartOf.slice(0, 3).map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
+                  />
+                </Flex>
+              ))}
+            </Row>
+            <Row gap="12" fillWidth>
+              {ecosystemsImPartOf.slice(3, 6).map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
+                  />
+                </Flex>
+              ))}
+            </Row>
+            <Row gap="12" fillWidth>
+              {ecosystemsImPartOf.slice(6, 8).map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
+                  />
+                </Flex>
+              ))}
+              <Flex style={{ flex: 1 }} />
+            </Row>
+          </Column>
         </Column>
       </Column>
 

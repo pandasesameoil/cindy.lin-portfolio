@@ -12,13 +12,17 @@ a:hover {
   .main-content-wrapper {
     padding-left: 20px !important;
     padding-right: 20px !important;
+    box-sizing: border-box !important;
   }
   .page-container {
     width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
   }
-  .hero-container {
-    padding: 0 !important;
+  /* Ensure all direct children don't overflow */
+  .main-content-wrapper > * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -26,10 +30,9 @@ a:hover {
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column-reverse !important;
-    padding: 0 24px;
   }
   .hero-container > div:first-child {
-    padding: 0 8px;
+    padding: 0;
   }
   .hero-avatar-container {
     padding-right: 0 !important;

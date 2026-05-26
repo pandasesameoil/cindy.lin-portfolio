@@ -29,11 +29,11 @@ export const featuredProjects: FeaturedProject[] = [
   },
   {
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
-    title: "Irvine Tech Day",
-    tag: "Event & Community Leadership",
+    title: "Ecomart",
+    tag: "E-Commerce Growth & Brand Operations",
     description:
-      "Managed 38+ strategic partnerships and organized 100+ events, growing Irvine Dream Run from 300 to 1,200+ attendees across 3 annual events.",
-    link: "/work/scaling-startup-communities-and-partnerships-at-sunstone-vc",
+      "Managed operations for 4 consumer brands and 20+ SKUs across Amazon Seller Central, Vendor Central, and Shopify, helping brands grow from launch stage to $130K+ in annual revenue.",
+    link: "/work/ecomart-consumer-brand-growth",
   },
 ];
 

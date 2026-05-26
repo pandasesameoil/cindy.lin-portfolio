@@ -11,6 +11,7 @@ a:hover {
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column-reverse !important;
+    padding: 0 24px;
   }
   .hero-avatar-container {
     padding-right: 0 !important;
@@ -20,6 +21,25 @@ a:hover {
   .hero-avatar-container .Avatar {
     width: 160px !important;
     height: 160px !important;
+  }
+}
+
+/* Bottom Navigation Bar Mobile Styles */
+@media (max-width: 768px) {
+  header[data-border="rounded"] {
+    padding: 12px 0 !important;
+  }
+  header[data-border="rounded"] > div > div {
+    padding: 8px 12px !important;
+  }
+  header[data-border="rounded"] button,
+  header[data-border="rounded"] a[role="button"] {
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+  }
+  header[data-border="rounded"] svg {
+    width: 24px !important;
+    height: 24px !important;
   }
 }
 

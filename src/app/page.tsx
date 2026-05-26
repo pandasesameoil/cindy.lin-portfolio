@@ -194,7 +194,7 @@ export default function Home() {
             </Row>
           </RevealFx>
         </Column>
-        <Flex flex={1} horizontal="end" vertical="center" s={{ horizontal: "center" }}>
+        <Flex flex={1} horizontal="end" vertical="center" s={{ horizontal: "center" }} style={{ paddingRight: "24px" }}>
           <RevealFx translateY="8" delay={0.3}>
             <Avatar src={person.avatar} size="xl" style={{ width: "320px", height: "320px" }} />
           </RevealFx>

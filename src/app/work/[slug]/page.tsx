@@ -120,7 +120,9 @@ export default async function Project({
       </Row>
       {post.metadata.images.length > 0 && (
         post.metadata.images.length === 1 ? (
-          <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
+          <Flex horizontal="center" fillWidth style={{ maxWidth: "800px", margin: "0 auto" }}>
+            <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
+          </Flex>
         ) : (
           <Row gap="16" fillWidth>
             {post.metadata.images.map((image, index) => (

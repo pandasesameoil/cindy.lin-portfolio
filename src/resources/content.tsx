@@ -96,7 +96,7 @@ const ecosystemsImPartOf = [
 const person: Person = {
   firstName: "Cindy",
   lastName: "Lin",
-  name: `Hsin-Yi (Cindy) Lin`,
+  name: `Cindy Lin`,
   role: "GTM & Ecosystem Operator | Partnerships, Community-Led Growth, and Cross-Border Commerce",
   avatar: "/images/avatar.jpg",
   email: "panda.sesameoil@gmail.com",
@@ -120,12 +120,6 @@ const social: Social = [
     icon: "linkedin",
     link: "https://www.linkedin.com/in/cindyhylin",
     essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
   },
   {
     name: "Email",

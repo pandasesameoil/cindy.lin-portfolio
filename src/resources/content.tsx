@@ -131,7 +131,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/opengraph-image",
+  image: "/og-image.png",
   label: "Home",
   title: `Cindy Lin - Portfolio`,
   description: `GTM & Ecosystem Operator specializing in Venture Capital, Startup Ecosystems, and E-Commerce. Partnerships, Community-Led Growth, and Cross-Border Commerce.`,

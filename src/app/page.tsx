@@ -377,7 +377,7 @@ export default function Home() {
             </Row>
             <Row gap="12" fillWidth>
               {[
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/16.png-V7PKusK4U0zfUqgcrgli1nQQYhte7U.jpeg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Subhead%201%20%28Bold%29.png-mkEelHXpd5Ek1Jcr5UFCSInwyu3ZI6.jpeg",
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11.png-fAphChoq6i1dSBBZW7iDLbnIphADBQ.jpeg",
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/17.png-F3D5lH3J0CGBeXhFX7OVNLkuc53NWc.jpeg",
               ].map((image, index) => (

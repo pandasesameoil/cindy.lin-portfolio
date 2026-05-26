@@ -161,10 +161,11 @@ export default function Home() {
                 VIEW MY WORK
               </Button>
               <Button
-                href="/resume.pdf"
+                href="/cindy-lin-resume.pdf"
                 variant="secondary"
                 size="m"
                 suffixIcon="download"
+                data-download="Cindy-Lin-Resume.pdf"
               >
                 DOWNLOAD RESUME
               </Button>

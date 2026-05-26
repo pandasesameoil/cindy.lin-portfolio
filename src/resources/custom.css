@@ -10,7 +10,7 @@ a:hover {
 /* Global Mobile Padding - All Pages */
 @media (max-width: 768px) {
   .main-content-wrapper {
-    padding: 24px 24px 80px 24px !important;
+    padding: 32px 28px 100px 28px !important;
     box-sizing: border-box !important;
   }
   .page-container {
@@ -29,7 +29,6 @@ a:hover {
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column-reverse !important;
-    padding: 0 !important;
   }
   .hero-container > div:first-child {
     padding: 0;
@@ -37,7 +36,7 @@ a:hover {
   .hero-avatar-container {
     padding-right: 0 !important;
     justify-content: center !important;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   .hero-avatar-container .Avatar,
   .hero-avatar-container [class*="Avatar"],

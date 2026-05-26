@@ -1,6 +1,98 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
+// Shared photo data for "A Glimpse of My Journey" section
+const experiencesIBuilt = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-v02Un53D4Y7W0Kq5b9YCEY7o6AJj0Q.jpg",
+    alt: "2026 Irvine Tech Day",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-zGVO8hjSna4rD8vVP9Odh8LOV99ReW.jpg",
+    alt: "Sunstone 2026 CES After Party",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-RPEiFIAqRvtwHrytDrVASq49HqCSpF.jpg",
+    alt: "2026 Irvine Tech Day - Pitch Irvine",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-wWCWPNgTUVfl5J3Xu4bE6JTRyGchhb.jpg",
+    alt: "Nvidia GTC After Hours - Robotics & Physical AI",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/18-JMWCgV6yP8ZDmfbRI5qAaSsDILlTgR.jpg",
+    alt: "Electrifying the Future - Hosted A16z LA Tech Week",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-TyRRr2cHzp2jEmUpWTykE21yzhIbYm.jpg",
+    alt: "Nvidia GTC After Hours - Robotics & Physical AI",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19-9c9BIFVNADrsTezcE7Nmr10YlKJnUN.jpg",
+    alt: "2025 Irvine Dream Run",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-D2iPuwyzijGQFK4DwS4aiJ6uHqcv1R.jpg",
+    alt: "Led Team Dragon at 2025 City of Hope's Walk for Hope",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Subhead%201%20%28Bold%29-2-4QIzlZrnhMeQ66we978IqWG6fmu8Cm.jpg",
+    alt: "Sunstone Stage Connects - Demo Day",
+    orientation: "horizontal" as const,
+  },
+];
+
+const ecosystemsImPartOf = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13.png-CH3XwPNn1w0wpKPkD8znUMpaEv9mwJ.jpeg",
+    alt: "Taiwan OC Chamber Annual Gala with Irvine Councilmembers",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14.png-L98dr049lH4EK6nWQvHFNYHWNVzbIx.jpeg",
+    alt: "Pacific Symphony Lunar New Year Celebration",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9.png-Qk0aI2zsmCk8a7AwtDl47AcaqZc4Qq.jpeg",
+    alt: "Cal Poly Pomona Speaker Series Featuring the COO of Dave's Hot Chicken",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Subhead%201%20%28Bold%29.png-mkEelHXpd5Ek1Jcr5UFCSInwyu3ZI6.jpeg",
+    alt: "Private Yacht Gathering for Restaurant & Brand Leaders",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11.png-fAphChoq6i1dSBBZW7iDLbnIphADBQ.jpeg",
+    alt: "Stella Zhang New Venture Competition - 2nd place",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/17.png-F3D5lH3J0CGBeXhFX7OVNLkuc53NWc.jpeg",
+    alt: "Brand Popup with Founder of Bowlcut",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10.png-2VB8Hjf1mVQxH67SgdpNhgn1tEXD5O.jpeg",
+    alt: "Ding-go Founding Team",
+    orientation: "horizontal" as const,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.png-myAgdAQjtHbfwdY1YryCSbydmwcrEd.jpeg",
+    alt: "2026 CES",
+    orientation: "horizontal" as const,
+  },
+];
+
 const person: Person = {
   firstName: "Cindy",
   lastName: "Lin",
@@ -290,48 +382,8 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  images: [
-    {
-      src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80",
-      alt: "Team collaboration",
-      orientation: "horizontal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
-      alt: "Workshop session",
-      orientation: "horizontal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80",
-      alt: "Business meeting",
-      orientation: "horizontal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
-      alt: "Data analytics",
-      orientation: "horizontal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
-      alt: "E-commerce operations",
-      orientation: "horizontal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80",
-      alt: "Community event",
-      orientation: "horizontal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
-      alt: "Conference presentation",
-      orientation: "horizontal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
-      alt: "Startup team",
-      orientation: "horizontal",
-    },
-  ],
+  // Automatically populated from journey photos
+  images: [...experiencesIBuilt, ...ecosystemsImPartOf],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, experiencesIBuilt, ecosystemsImPartOf };

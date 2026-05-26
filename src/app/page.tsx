@@ -13,7 +13,7 @@ import {
   SmartLink,
   Flex,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, social } from "@/resources";
+import { home, about, person, baseURL, social, experiencesIBuilt, ecosystemsImPartOf } from "@/resources";
 import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
 
 export async function generateMetadata() {
@@ -272,11 +272,7 @@ export default function Home() {
           </Column>
           <Column gap="12" fillWidth>
             <Row gap="12" fillWidth>
-              {[
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-v02Un53D4Y7W0Kq5b9YCEY7o6AJj0Q.jpg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-zGVO8hjSna4rD8vVP9Odh8LOV99ReW.jpg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-RPEiFIAqRvtwHrytDrVASq49HqCSpF.jpg",
-              ].map((image, index) => (
+              {experiencesIBuilt.slice(0, 3).map((image, index) => (
                 <Flex
                   key={index}
                   style={{
@@ -287,19 +283,15 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src={image}
-                    alt={`Experience ${index + 1}`}
+                    src={image.src}
+                    alt={image.alt}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>
               ))}
             </Row>
             <Row gap="12" fillWidth>
-              {[
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-wWCWPNgTUVfl5J3Xu4bE6JTRyGchhb.jpg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/18-JMWCgV6yP8ZDmfbRI5qAaSsDILlTgR.jpg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-TyRRr2cHzp2jEmUpWTykE21yzhIbYm.jpg",
-              ].map((image, index) => (
+              {experiencesIBuilt.slice(3, 6).map((image, index) => (
                 <Flex
                   key={index}
                   style={{
@@ -310,19 +302,15 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src={image}
-                    alt={`Experience ${index + 4}`}
+                    src={image.src}
+                    alt={image.alt}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>
               ))}
             </Row>
             <Row gap="12" fillWidth>
-              {[
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19-9c9BIFVNADrsTezcE7Nmr10YlKJnUN.jpg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-D2iPuwyzijGQFK4DwS4aiJ6uHqcv1R.jpg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Subhead%201%20%28Bold%29-2-4QIzlZrnhMeQ66we978IqWG6fmu8Cm.jpg",
-              ].map((image, index) => (
+              {experiencesIBuilt.slice(6, 9).map((image, index) => (
                 <Flex
                   key={index}
                   style={{
@@ -333,8 +321,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src={image}
-                    alt={`Experience ${index + 7}`}
+                    src={image.src}
+                    alt={image.alt}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>
@@ -353,11 +341,7 @@ export default function Home() {
           </Column>
           <Column gap="12" fillWidth>
             <Row gap="12" fillWidth>
-              {[
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13.png-CH3XwPNn1w0wpKPkD8znUMpaEv9mwJ.jpeg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14.png-L98dr049lH4EK6nWQvHFNYHWNVzbIx.jpeg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9.png-Qk0aI2zsmCk8a7AwtDl47AcaqZc4Qq.jpeg",
-              ].map((image, index) => (
+              {ecosystemsImPartOf.slice(0, 3).map((image, index) => (
                 <Flex
                   key={index}
                   style={{
@@ -368,19 +352,15 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src={image}
-                    alt={`Ecosystem ${index + 1}`}
+                    src={image.src}
+                    alt={image.alt}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>
               ))}
             </Row>
             <Row gap="12" fillWidth>
-              {[
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Subhead%201%20%28Bold%29.png-mkEelHXpd5Ek1Jcr5UFCSInwyu3ZI6.jpeg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11.png-fAphChoq6i1dSBBZW7iDLbnIphADBQ.jpeg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/17.png-F3D5lH3J0CGBeXhFX7OVNLkuc53NWc.jpeg",
-              ].map((image, index) => (
+              {ecosystemsImPartOf.slice(3, 6).map((image, index) => (
                 <Flex
                   key={index}
                   style={{
@@ -391,18 +371,15 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src={image}
-                    alt={`Ecosystem ${index + 4}`}
+                    src={image.src}
+                    alt={image.alt}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>
               ))}
             </Row>
             <Row gap="12" fillWidth>
-              {[
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10.png-2VB8Hjf1mVQxH67SgdpNhgn1tEXD5O.jpeg",
-                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.png-myAgdAQjtHbfwdY1YryCSbydmwcrEd.jpeg",
-              ].map((image, index) => (
+              {ecosystemsImPartOf.slice(6, 8).map((image, index) => (
                 <Flex
                   key={index}
                   style={{
@@ -413,8 +390,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src={image}
-                    alt={`Ecosystem ${index + 7}`}
+                    src={image.src}
+                    alt={image.alt}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "bottom" }}
                   />
                 </Flex>

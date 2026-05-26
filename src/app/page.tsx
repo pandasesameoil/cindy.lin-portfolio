@@ -296,6 +296,29 @@ export default function Home() {
             </Row>
             <Row gap="12" fillWidth>
               {[
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-wWCWPNgTUVfl5J3Xu4bE6JTRyGchhb.jpg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/18-JMWCgV6yP8ZDmfbRI5qAaSsDILlTgR.jpg",
+                "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-TyRRr2cHzp2jEmUpWTykE21yzhIbYm.jpg",
+              ].map((image, index) => (
+                <Flex
+                  key={index}
+                  style={{
+                    flex: 1,
+                    aspectRatio: "4/3",
+                    borderRadius: "14px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={image}
+                    alt={`Experience ${index + 4}`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </Flex>
+              ))}
+            </Row>
+            <Row gap="12" fillWidth>
+              {[
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19-9c9BIFVNADrsTezcE7Nmr10YlKJnUN.jpg",
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-D2iPuwyzijGQFK4DwS4aiJ6uHqcv1R.jpg",
               ].map((image, index) => (
@@ -310,7 +333,7 @@ export default function Home() {
                 >
                   <img
                     src={image}
-                    alt={`Experience ${index + 4}`}
+                    alt={`Experience ${index + 7}`}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   />
                 </Flex>

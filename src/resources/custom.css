@@ -13,14 +13,17 @@ a:hover {
     flex-direction: column-reverse !important;
     padding: 0 24px;
   }
+  .hero-container > div:first-child {
+    padding: 0 8px;
+  }
   .hero-avatar-container {
     padding-right: 0 !important;
     justify-content: center !important;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .hero-avatar-container .Avatar {
-    width: 160px !important;
-    height: 160px !important;
+    width: 120px !important;
+    height: 120px !important;
   }
 }
 
